@@ -1,6 +1,6 @@
-correct = False
+isCorrect = False
 
-while correct == False:
+while isCorrect == False:
     password1 = input()
     password2 = input()
     if len(password1) < 8:
@@ -10,6 +10,6 @@ while correct == False:
     elif password1 != password2:
         print("Различаются.")
     else:
-        correct = True
+        isCorrect = True
 
 print("ОК")

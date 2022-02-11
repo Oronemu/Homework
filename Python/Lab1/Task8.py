@@ -1,7 +1,7 @@
 height = input()
 
-minHeight = 150
-maxHeight = 190
+minHeight = 999
+maxHeight = 0
 count = 0
 
 while height != "!":
