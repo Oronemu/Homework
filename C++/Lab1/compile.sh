@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p Build/
+
 for file in *.cpp 
 do
     obj=$(echo $file | sed 's/.cpp/.o/g')
