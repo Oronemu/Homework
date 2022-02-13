@@ -8,3 +8,6 @@
 ---
 * [1. Введение](Python/Lab1)
 ---
+# Swift
+---
+* [Фигуры, консольное приложение](Swift/FiguresLabSwift/FiguresLabSwift/)
