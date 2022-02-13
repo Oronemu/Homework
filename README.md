@@ -6,7 +6,7 @@
 
 # Swift 
 ---
-* [Фигуры, консольное приложение(Порт с С++)](Swift/FiguresLabSwift/FiguresLabSwift/)
+* [Фигуры, консольное приложение(Порт с С++)](Swift/FiguresLabSwift/)
 ---
 # Java
 ---
