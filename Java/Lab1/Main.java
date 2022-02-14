@@ -22,15 +22,15 @@ public class Main {
         try {
             figure = new Circle(r);
         }
-        catch(Except except){
-            except.show();
+        catch(Exception except){
+            System.out.println(except.getMessage());
             return;
         }
         try {
             cylinder= new Cylinder<Figure>(figure, h);
         }
-        catch(Except except){
-            except.show();
+        catch(Exception except){
+            System.out.println(except.getMessage());
             return;
         }
         System.out.println("Объем цилиндра: " + cylinder.calcVolume());

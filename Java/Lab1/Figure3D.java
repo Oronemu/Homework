@@ -1,19 +1,19 @@
 package Java.Lab1;
 
-abstract class Figure3D{
-    public abstract double calcVolume();
+interface Figure3D{
+    double calcVolume();
 }
 
-class Cylinder<typeFigure> extends Figure3D{
+class Cylinder<typeFigure> implements Figure3D{
     private typeFigure f;
     private double h;
 
-    public Cylinder(typeFigure f, double h) throws Except{
+    public Cylinder(typeFigure f, double h) throws Exception{
         if (h > 0) {
 			this.h = h;
 			this.f = f;
 		}
-        else throw new Except(102, ": Error creating cylinder");
+        else throw new Exception("Error creating cylinder");
     }
 
     public double calcVolume(){
