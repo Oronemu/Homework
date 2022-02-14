@@ -1,4 +1,9 @@
-import Darwin
+#if os(Linux)
+    import Glibc
+#else
+    import Darwin
+#endif
+
 print("Enter radius and height of cylinder")
 var check: Bool = false
 

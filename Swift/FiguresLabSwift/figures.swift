@@ -1,4 +1,8 @@
-import Darwin
+#if os(Linux)
+    import Glibc
+#else
+    import Darwin
+#endif
 
 class Figure {
   func CalcArea() -> Double{
