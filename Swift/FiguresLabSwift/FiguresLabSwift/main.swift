@@ -1,8 +1,4 @@
-#if os(Linux)
-    import Glibc
-#else
-    import Darwin
-#endif
+import Darwin
 
 print("Enter radius and height of cylinder")
 var check: Bool = false
@@ -16,8 +12,11 @@ repeat {
     print("h is NaN")
     continue
   }
-  let circle = Circle(r)
-  let cyliner = Cylinder(h, circle)
-  print("Cylinder volume is \(round(cyliner.calcVolume() * 100) / 100)")
+  
+  let circle = try Circle(r)
+  let cylinder = try Cylinder(h, circle)
+  
+  print("Cylinder volume is \(round(cylinder.calcVolume() * 100) / 100)")
   check = true
+  
 } while !check
