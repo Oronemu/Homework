@@ -1,15 +1,12 @@
-from turtle import width
-
-
 count_of_queens = 8
 width = []
 height = []
 is_correct = True
 
-for i in range(0, count_of_queens):
-    x_input, y_input = [int(line) for line in input().split()]
-    width.append(x_input)
-    height.append(y_input)
+for i in range(count_of_queens):
+    width_input, height_input = [int(line) for line in input().split()]
+    width.append(width_input)
+    height.append(height_input)
 
 for i in range(count_of_queens):
     for j in range(i + 1, count_of_queens):
