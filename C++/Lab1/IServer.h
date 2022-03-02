@@ -3,9 +3,9 @@
 
 class IServer {
     public:
-    virtual void func() = 0; 
+    virtual void func(int c) = 0; 
 };
 
-IServer* CreateInstance();
+IServer* CreateInstance(int choice);
 
 #endif 

@@ -1,20 +1,20 @@
-#include "Server.h"
+#include "Server2.h"
 #include <iostream>
 
-void Server::func(int c) {
+void Server2::func(int c) {
     std::cout << "Func1 - " << (a + b) * c << "\n";
 }
 
-void Server::func2() {
+void Server2::func2() {
     std::cout << "Func2 - " << (a + b) << "\n";
 }
 
-Server::Server() {
-    a = 2;
-    b = 10;
+Server2::Server2() {
+    a = 5;
+    b = 1;
 }
 
-Server::~Server() {
+Server2::~Server2() {
     std::cout << "Destructor";
 }
 

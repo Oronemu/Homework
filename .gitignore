@@ -1,3 +1,3 @@
 .DS_Store
 *.xcodeproj
-./C++/Lab1/Build
+/C++/Lab1/Build
