@@ -1,11 +1,11 @@
-#ifndef ISERVER_H
-#define ISERVER_H
+#include "IUnknown.h"
 
-class IServer {
+class IServer: public IUnknown {
     public:
-    virtual void func(int c) = 0; 
+        virtual void Func() = 0;
 };
 
-IServer* CreateInstance(int choice);
-
-#endif 
+class IServer2: public IUnknown {
+    public:
+        virtual void Func2() = 0;
+};

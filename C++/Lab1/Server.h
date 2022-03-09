@@ -1,17 +1,17 @@
-#ifndef SERVER_H
-#define SERVER_H
 #include "IServer.h"
-#include "IServer2.h"
 
-class Server: public IServer, public IServer2 {
-    private:
-        int a;
-        int b;
-    public: 
-        Server();
-        ~Server();
-        void func(int c);
-        void func2();
+class Server : public IServer, public IServer2 {
+    public:
+        void Func();
+        void Func2();
+        int QueryInterface(int iid, void** ppv);
 };
 
-#endif 
+class Server2 :public IServer, public IServer2 {
+    public:
+        void Func();
+        void Func2();
+        int QueryInterface(int iid, void** ppv);
+};
+
+IUnknown* CreateInstance(int serverID);
