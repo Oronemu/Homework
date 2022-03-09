@@ -1,7 +1,7 @@
 # РЕПОЗИТОРИЙ С ДОМАШКОЙ
 
 <p align="center">
-    <img src="https://repository-images.githubusercontent.com/349182748/21c4a880-8db7-11eb-9d1c-3556e6fac883"> 
+    <img src="https://sun9-83.userapi.com/impg/2mc_ZsZ_ukHNhyzPeqyb65-nXxebgoRikY7T3g/LoMoqs6VQhg.jpg?size=1023x278&quality=96&sign=2ebeb1321ebe0aa053b6986e0b7cf75b&type=album"> 
 </p>
 
 # Swift 
@@ -14,7 +14,7 @@
 ---
 # C++ 
 ---
-* [1. Симуляция асинхронного программирования](C++/Lab1/)
+* [1. Базовая часть компонентно-ориентированного программирования](C++/Lab1/)
 ---
 # Python
 ---
