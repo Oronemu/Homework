@@ -1,7 +1,7 @@
 # РЕПОЗИТОРИЙ С ДОМАШКОЙ
 
 <p align="center">
-    <img src="https://repository-images.githubusercontent.com/349182748/21c4a880-8db7-11eb-9d1c-3556e6fac883"> 
+    <img src="https://sun9-19.userapi.com/impg/tz-unRZgtDUe72lS0l-ShYCLhKBCj75AAQIuHg/LVYdhykhTDU.jpg?size=1010x484&quality=96&sign=c801f03e86a24e030cfcc924eb0812c1&type=album"> 
 </p>
 
 # Swift 
