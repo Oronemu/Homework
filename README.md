@@ -1,8 +1,9 @@
 # РЕПОЗИТОРИЙ С ДОМАШКОЙ
 
-<p align="center">
-    <img src="https://sun9-83.userapi.com/impg/2mc_ZsZ_ukHNhyzPeqyb65-nXxebgoRikY7T3g/LoMoqs6VQhg.jpg?size=1023x278&quality=96&sign=2ebeb1321ebe0aa053b6986e0b7cf75b&type=album"> 
-</p>
+![GitHub](https://img.shields.io/github/commit-activity/m/Oronemu/Homework?style=for-the-badge)
+![GitHub](https://img.shields.io/github/languages/top/Oronemu/Homework?style=for-the-badge)
+![GitHub](https://img.shields.io/github/languages/count/Oronemu/Homework?style=for-the-badge)
+![GitHub](https://img.shields.io/github/stars/Oronemu?style=for-the-badge)
 
 # Swift 
 ---
