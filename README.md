@@ -3,21 +3,23 @@
 ![GitHub](https://img.shields.io/github/commit-activity/m/Oronemu/Homework?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/languages/top/Oronemu/Homework?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/languages/count/Oronemu/Homework?style=for-the-badge)
-![GitHub](https://img.shields.io/github/stars/Oronemu?style=for-the-badge)
+![GitHub](https://img.shields.io/tokei/lines/github/oronemu/homework?style=for-the-badge)
 
-# Swift 
+![alt text](https://images.musement.com/cover/0087/57/adobestock-235597642-monterey-jpeg_header-8656352.jpeg)
+
+[![](https://img.shields.io/badge/Swift-ED8B00?style=for-the-badge&logo=Swift&logoColor=white)](Swift/)
 ---
 * [Фигуры, консольное приложение(Порт с С++)](Swift/FiguresLabSwift/)
 ---
-# Java
+[![](https://img.shields.io/badge/Java-red?style=for-the-badge&logo=java&logoColor=white)](Java/)
 ---
 * [1. Фигуры, консольное приложение(Порт с С++)](Java/Lab1/)
 ---
-# C++ 
+[![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](C++/)
 ---
 * [1. Базовая часть компонентно-ориентированного программирования](C++/Lab1/)
 ---
-# Python
+[![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](Python/)
 ---
 * [1. Введение](Python/Lab1)
 * [2. Списки и строки](Python/Lab2)
