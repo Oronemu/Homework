@@ -1,76 +1,78 @@
-#include "Server.h"
 #include <iostream>
+#include "Interfaces.h"
+
+class Server : public IServer, public IServer2 {
+public:
+    void Func();
+    void Func2();
+    H_RESULT QueryInterface(I_ID iid, void** ppv);
+};
+
+class Server2 : public IServer, public IServer2 {
+public:
+    void Func();
+    void Func2();
+    H_RESULT QueryInterface(I_ID iid, void** ppv);
+};
 
 void Server::Func() {
-    std::cout << "Сервер 1, используется Интерфейс 1" << std::endl;
+    std::cout << "Server 1 Interface 1" << std::endl;
 }
 
 void Server::Func2() {
-    std::cout << "Сервер 1, используется Интерфейс 2" << std::endl;
+    std::cout << "Server 1 Interface 2" << std::endl;
 }
 
-int Server::QueryInterface(int iid, void** ppv) {
+H_RESULT Server::QueryInterface(I_ID iid, void** ppv) {
     switch (iid) {
-        case 0: {
+        case IID_IUnknown: {
             *ppv = (IUnknown*) (IServer*) this;
-            return 0;
+            break;
         }
-        case 1: {
+        case IID_IServer: {
             *ppv = (IServer*) this;
-            return 1;
+            break;
         }
-        case 2: {
+        case IID_IServer2: {
             *ppv = (IServer2*) this;
-            return 2;
+            break;
         }
         default: {
             *ppv = NULL;
-            return -1;
+            return E_NOINTERFACE;
         }
     }
+    return S_OK;
 }
 
-void Server2::Func() {
-    std::cout << "Сервер 2, используется Интерфейс 1" << std::endl;
-}
-
-void Server2::Func2() {
-    std::cout << "Сервер 2, используется Интерфейс 2" << std::endl;
-}
-
-int Server2::QueryInterface(int iid, void** ppv) {
-    switch (iid) {
-        case 0: {
-            *ppv = (IUnknown*) (IServer*) this;
-            return 0;
-        }
-        case 1: {
-            *ppv = (IServer*) this;
-            return 1;
-        }
-        case 2: {
-            *ppv = (IServer2*) this;
-            return 2;
-        }
-        default: {
-            *ppv = NULL;
-            return -1;
-        }
+H_RESULT IServerFactory::CreateInstance(I_ID iid, void** ppv) {
+    Server* server = new Server();
+    if (server == 0) {
+        return E_OUTOFMEMORY;
     }
+    H_RESULT res = server->QueryInterface(iid, ppv);
+    return res;
 }
 
-IUnknown* CreateInstance(int serverID) {
-    switch (serverID) {
-        case 1: {
-            Server* server = new Server();
-            return (IUnknown*) (IServer*) server;
-        }
-        case 2: {
-            Server2* server = new Server2();
-            return (IUnknown*) (IServer*) server;
-        }
-        default: {
-            return NULL;
-        }
+H_RESULT IServerFactory::QueryInterface(I_ID iid, void** ppv) {
+    if (iid == IID_IUnknown || iid == IID_IClassFactory) {
+        *ppv = (IClassFactory*) this;
     }
+    else {
+        *ppv = 0;
+        return E_NOINTERFACE;
+    }
+    return S_OK;
+}
+
+H_RESULT GetClassObject(CLS_ID clsid, I_ID iid, void** ppv) {
+    if(clsid != CLSIDServer) {
+        return E_CLASSNOTAVAILABLE;
+    }
+    IServerFactory* factory = new IServerFactory();
+    if(factory == 0) {
+        return E_OUTOFMEMORY;
+    }
+    H_RESULT res = factory->QueryInterface(iid, ppv);
+    return res;
 }
