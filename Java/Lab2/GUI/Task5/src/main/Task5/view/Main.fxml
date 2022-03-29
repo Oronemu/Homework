@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewmodel.Controller">
+   <children>
+      <RadioButton fx:id="a1" layoutX="82.0" layoutY="123.0" mnemonicParsing="false" text="Зеленый" />
+      <RadioButton fx:id="a2" layoutX="82.0" layoutY="162.0" mnemonicParsing="false" text="Красный" />
+      <RadioButton fx:id="a3" layoutX="82.0" layoutY="204.0" mnemonicParsing="false" text="Белый" />
+      <Text layoutX="72.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Первый цвет">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="260.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#onClick" text="Нарисовать" />
+      <Text fx:id="result" layoutX="82.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="473.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="250.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Второй цвет">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="430.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Третий цвет">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="b1" layoutX="257.0" layoutY="123.0" mnemonicParsing="false" text="Черный" />
+      <RadioButton fx:id="b2" layoutX="257.0" layoutY="162.0" mnemonicParsing="false" text="Белый" />
+      <RadioButton fx:id="b3" layoutX="257.0" layoutY="204.0" mnemonicParsing="false" text="Желтый" />
+      <RadioButton fx:id="c1" layoutX="443.0" layoutY="123.0" mnemonicParsing="false" text="Фиолетовый" />
+      <RadioButton fx:id="c2" layoutX="443.0" layoutY="162.0" mnemonicParsing="false" text="Синий" />
+      <RadioButton fx:id="c3" layoutX="443.0" layoutY="204.0" mnemonicParsing="false" text="Пурпурный" />
+   </children>
+</AnchorPane>

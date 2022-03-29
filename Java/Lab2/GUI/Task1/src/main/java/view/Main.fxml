@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewmodel.ViewModel">
+    <AnchorPane>
+      <children>
+         <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+               <TextField fx:id="textLeft" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="200.0" style="-fx-background-color: black; -fx-text-fill: white;" HBox.hgrow="ALWAYS" />
+               <Button fx:id="button" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#onClick" style="-fx-background-color: yellow; -fx-text-fill: black; -fx-background-radius: 0;" text="-&gt;" HBox.hgrow="ALWAYS">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <TextField fx:id="textRight" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="200.0" style="-fx-background-color: black; -fx-text-fill: white;" HBox.hgrow="ALWAYS" />
+            </children>
+         </HBox>
+      </children></AnchorPane>
+</Scene>
