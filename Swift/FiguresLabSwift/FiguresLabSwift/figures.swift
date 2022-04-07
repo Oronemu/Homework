@@ -1,13 +1,8 @@
 import Darwin
 
-class Figure {
-  func CalcArea() -> Double {
-    fatalError("Must Override")
-  }
-  
-  func CalcPerimeter() -> Double {
-    fatalError("Must Override")
-  }
+protocol Figure {
+  func CalcArea() -> Double 
+  func CalcPerimeter() -> Double 
 }
 
 class Circle: Figure {

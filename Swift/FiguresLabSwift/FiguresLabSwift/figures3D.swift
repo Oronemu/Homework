@@ -1,7 +1,5 @@
-class Figure3D {
-  func calcVolume() -> Double {
-    fatalError("Must Override")
-  }
+protocol Figure3D {
+  func calcVolume() -> Double
 }
 
 class Cylinder: Figure3D {
