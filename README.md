@@ -17,7 +17,7 @@
 ---
 [![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](C++/)
 ---
-* [1. Базовая часть компонентно-ориентированного программирования](C++/Lab1/)
+* [1-2. Запрос интерфейса. Фабрика класса. Подсчет ссылок. Обертка на клиенте. Собственный компонент	](C++/Lab1_2/)
 ---
 [![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](Python/)
 ---
