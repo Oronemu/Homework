@@ -26,4 +26,5 @@
 * [3. Множества](Python/Lab3)
 * [4. Словари](Python/Lab4)
 * [5. Функции](Python/Lab5)
+* [7. ООП](Python/Lab7)
 ---
