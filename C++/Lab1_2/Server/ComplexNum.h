@@ -3,12 +3,26 @@
 const I_ID IID_IUnknown = 0;
 const I_ID IID_IClassFactory = 10;
 
-const CLS_ID CLSIDColor = 101;
+const CLS_ID CLSIDComplex = 101;
 
 const I_ID IID_IAddComplexNum = 1;
 const I_ID IID_ISubComplexNum = 2;
-const I_ID IID_IGetCompexNum = 3;
-const I_ID IID_ISetCompexNum = 4;
+const I_ID IID_IPrintComplexNum = 3;
+
+class ComplexNum {
+    private:
+        int countReference = 0;
+        int real, img;
+    public:
+        ComplexNum();
+        ComplexNum(int real, int img);
+        H_RESULT QueryInterface(I_ID iid, void** ppv);
+        U_LONG AddRef();
+        U_LONG Release();
+        friend ComplexNum add(ComplexNum, ComplexNum);
+        friend ComplexNum sub(ComplexNum, ComplexNum);
+        void print();
+};
 
 class IAddComplexNum: public IUnknown {
 public:
@@ -20,18 +34,12 @@ public:
     virtual ComplexNum sub(ComplexNum, ComplexNum) = 0;
 };
 
-class IGetComplexNum: public IUnknown {
+class IPrintComplexNum: public IUnknown {
 public:
-    virtual void getComplexNum() = 0;
+    virtual void print() = 0;
 };
 
-class ISetComplexNum: public IUnknown {
-public:
-    virtual void setComplexNum() = 0;
-};
-
-class ComplexNumFactory : public IUnknown
-{
+class ComplexNumFactory: public IUnknown {
     private:
         int countReference = 0;
     public:
@@ -42,21 +50,15 @@ class ComplexNumFactory : public IUnknown
         ComplexNumFactory();
 };
 
-H_RESULT GetClassObject(CLS_ID clsid, I_ID iid, void** ppv);
-
-class ComplexNumWrapper
-{
+class ComplexNumWrapper {
     private:
         ComplexNumFactory* factory;
-
         IAddComplexNum* iAddComplexNum;
         ISubComplexNum* iSubComplexNum;
-        IGetComplexNum* iGetComplexNum;
-        ISetComplexNum* iSetComplexNum;
+        IPrintComplexNum* iPrintComplexNum;
 
     public:
-        void setComplexNum();
-        void getComplexNum();
+        void print();
         ComplexNum add(ComplexNum num1, ComplexNum num2);
         ComplexNum sub(ComplexNum num1, ComplexNum num2);
 
