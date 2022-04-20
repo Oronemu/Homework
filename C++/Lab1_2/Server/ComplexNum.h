@@ -65,3 +65,5 @@ class ComplexNumWrapper {
         ComplexNumWrapper(int real, int img);
         ~ComplexNumWrapper();
 };
+
+extern "C" H_RESULT GetClassObject(CLS_ID clsid, I_ID iid, void** ppv);

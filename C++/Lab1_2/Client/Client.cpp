@@ -1,23 +1,34 @@
 #include "../Server/ComplexNum.h"
 #include <iostream>
+#include <dlfcn.h>
 
 using namespace std;
 
+typedef H_RESULT (*GetClass) (CLS_ID clsid, I_ID iid, void** ppv);
+
 int main(int argc, char const *argv[]) {
-    ComplexNum n1(1, 2), n2(3, 4);
-    ComplexNum result;
 
-    //Вывод с сохранением результата
-    cout << "Вывод с сохранением результата" << endl;
+    // void *h;	// хандлер внешней библиотеки
+    // GetClass f;	// переменная для хранения адреса функции
 
-    result = add(n1,n2);
-    result.print();
-    result = sub(n1,n2);
-    result.print();
+	// h = dlopen("/Users/ivanrovkov/Desktop/Homework/C++/Lab1_2/Build/ComplexNum.so",RTLD_LAZY);
+	// if (!h){
+	// 	fprintf(stderr, "Error while dlopen(): %s\n", dlerror());
+	// 	return 1;
+	// }
 
-    //Разовый вывод без сохранения результата
-    cout << "\nРазовый вывод без сохранения результата" << endl;
+    // f = (GetClass) dlsym(h, "GetClassObject");
 
-    add(n1, n2).print();
-    sub(n1, n2).print();
+    // if (!f) {
+    //     cout << "No dll function" << endl;
+    //     return 0;
+    // } 
+
+    ComplexNumFactory* ppv;
+    IPrintComplexNum* iP;
+    // f(CLSIDComplex, IID_IClassFactory, (void**)&ppv);
+    ppv->CreateInstance(IID_IPrintComplexNum, (void**)&iP, 120, 230);
+    iP->print();
+
+	return 0;
 }

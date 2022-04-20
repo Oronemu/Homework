@@ -1,6 +1,21 @@
 #include "ComplexNum.h"
 #include <iostream>
 
+class ComplexNum: public IPrintComplexNum, IAddComplexNum, ISubComplexNum {
+    private:
+        int countReference = 0;
+        int real, img;
+    public:
+        ComplexNum();
+        ComplexNum(int real, int img);
+        H_RESULT QueryInterface(I_ID iid, void** ppv);
+        U_LONG AddRef();
+        U_LONG Release();
+        friend ComplexNum add(ComplexNum, ComplexNum);
+        friend ComplexNum sub(ComplexNum, ComplexNum);
+        void print();
+};
+
 ComplexNum::ComplexNum() {
     real = 0;
     img = 0;

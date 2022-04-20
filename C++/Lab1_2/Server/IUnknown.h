@@ -15,11 +15,18 @@ class IUnknown {
         virtual U_LONG Release() = 0;
 };
 
-class IClassFactory : public IUnknown {
+class IClassFactory: public IUnknown {
     private:
         int countReference = 0;
     public:
         virtual H_RESULT CreateInstance(I_ID iid, void** ppv) = 0;
-        U_LONG AddRef();
-        U_LONG Release();
+        U_LONG AddRef() {
+            countReference++;
+            return countReference;
+        }
+        U_LONG Release() {
+            countReference--;
+            if(countReference == 0) delete this;
+            return countReference;
+        }
 };
